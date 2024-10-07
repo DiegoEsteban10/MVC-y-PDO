@@ -1,5 +1,5 @@
 <?php
-require_once 'conexion.php';
+require_once '../controlador/conexion.php';
 
 // Consulta para obtener todos los libros
 $statement = $conexion->prepare('SELECT * FROM libros');
@@ -17,7 +17,7 @@ $libros = $statement->fetchAll(PDO::FETCH_ASSOC);
         
               body {
             font-family: Arial, sans-serif;
-            background-image: url('biblioteca.png'); /* Establecer la imagen como fondo */
+            background-image: url('../vista/img/biblioteca.png'); /* Establecer la imagen como fondo */
             background-size: cover; /* Cubrir todo el fondo */
             background-repeat: no-repeat; /* No repetir la imagen */
             margin: 0;
@@ -69,6 +69,21 @@ $libros = $statement->fetchAll(PDO::FETCH_ASSOC);
         .add-book-btn:hover {
             background-color: #218838;
         }
+
+        .eliminar-buton {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
         .colorcito {
             color: #FFFFFF;
         }
@@ -83,6 +98,12 @@ $libros = $statement->fetchAll(PDO::FETCH_ASSOC);
             <strong>Autor:</strong> <?= $libro['autor'] ?>
             <strong>Género:</strong> <?= $libro['genero'] ?>
             <strong>Año:</strong> <?= $libro['año'] ?>
+
+             <!-- Botón para eliminar el libro -->
+             <form action="eliminar.php" method="post" style="display:inline;">
+                <input type="hidden" name="id" value="<?= htmlspecialchars($libro['id']) ?>">
+                <input type="submit" value="Eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este libro?');">
+            </form>
         </li>
         <?php } ?>
     </ul>
@@ -90,3 +111,4 @@ $libros = $statement->fetchAll(PDO::FETCH_ASSOC);
     <a href="agregar.php" class="add-book-btn">Agregar libro</a>
 </body>
 </html>
+s

@@ -1,5 +1,5 @@
 <?php
-require_once 'conexion.php';
+require_once '../controlador/conexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $titulo = $_POST['titulo'];
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <style>
            body {
             font-family: Arial, sans-serif;
-            background-image: url('biblioteca.png'); /* Establecer la imagen como fondo */
+            background-image: url('../vista/img/biblioteca.png'); /* Establecer la imagen como fondo */
             background-size: cover; /* Cubrir todo el fondo */
             background-repeat: no-repeat; /* No repetir la imagen */
             margin: 0;
