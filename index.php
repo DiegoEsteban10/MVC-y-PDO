@@ -25,7 +25,7 @@ $libros = $statement->fetchAll(PDO::FETCH_ASSOC);
     <?php } ?>
         </ul>
 
-    <form action="agregar.php" method="post">
+    <form action="agregar.php" method="get">
         <input type="submit" value="Agregar libro">
     </form>
 </body>

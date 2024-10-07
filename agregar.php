@@ -25,12 +25,16 @@ exit();
     <form action="" method="post">
         <label for="titulo">Título:</label>
         <input type="text" id="titulo" name="titulo"><br>
+
         <label for="autor">Autor:</label>
         <input type="text" id="autor" name="autor"><br>
+
         <label for="genero">Género:</label>
         <input type="text" id="genero" name="genero"><br>
+
         <label for="año">Año:</label>
         <input type="number" id="año" name="año"><br>
+
         <input type="submit" value="Guardar">
     </form>
 </body>
