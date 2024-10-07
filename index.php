@@ -14,12 +14,21 @@ $libros = $statement->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
     <style>
-        body {
+        
+              body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-image: url('biblioteca.png'); /* Establecer la imagen como fondo */
+            background-size: cover; /* Cubrir todo el fondo */
+            background-repeat: no-repeat; /* No repetir la imagen */
             margin: 0;
             padding: 20px;
             color: #333;
+            opacity: 0.9; /* Opacidad para que el texto sea legible */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrar elementos horizontalmente */
+            justify-content: center; /* Centrar elementos verticalmente */
+            height: 100vh; /* Altura completa de la ventana */
         }
         h1 {
             text-align: center;
@@ -60,10 +69,13 @@ $libros = $statement->fetchAll(PDO::FETCH_ASSOC);
         .add-book-btn:hover {
             background-color: #218838;
         }
+        .colorcito {
+            color: #FFFFFF;
+        }
     </style>
 </head>
 <body>
-    <h1>Biblioteca</h1>
+    <h1 class="colorcito">Biblioteca</h1>
     <ul class="libro-list">
         <?php foreach ($libros as $libro) { ?>
         <li>

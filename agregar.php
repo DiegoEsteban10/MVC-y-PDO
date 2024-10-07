@@ -22,16 +22,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar libro</title>
     <style>
-        body {
+           body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-image: url('biblioteca.png'); /* Establecer la imagen como fondo */
+            background-size: cover; /* Cubrir todo el fondo */
+            background-repeat: no-repeat; /* No repetir la imagen */
             margin: 0;
             padding: 20px;
             color: #333;
+            opacity: 0.9; /* Opacidad para que el texto sea legible */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrar elementos horizontalmente */
+            justify-content: center; /* Centrar elementos verticalmente */
+            height: 100vh; /* Altura completa de la ventana */
         }
         h1 {
             text-align: center;
-            color: #444;
+            color: ;
         }
         form {
             max-width: 400px;
@@ -66,10 +74,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         input[type="submit"]:hover {
             background-color: #218838;
         }
+        .colorcito {
+            color: #FFFFFF;
+        }
     </style>
 </head>
 <body>
-    <h1>Agregar libro</h1>
+    <h1 class="colorcito">Agregar libro</h1>
     <form action="" method="post">
         <label for="titulo">Título:</label>
         <input type="text" id="titulo" name="titulo">
