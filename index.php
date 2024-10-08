@@ -1,15 +1,11 @@
 <?php
-require_once '../controlador/conexion.php';
-
-// Consulta para obtener todos los libros
-$statement = $conexion->prepare('SELECT * FROM libros');
-$statement->execute();
-$libros = $statement->fetchAll(PDO::FETCH_ASSOC);
+require_once 'modelo/traerlibro.php';
 ?>
-
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
