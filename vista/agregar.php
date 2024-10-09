@@ -1,7 +1,5 @@
 <?php
-require_once '../controlador/controladorCrearlibro.php';
-require_once '../modelo/crearlibro.php';
-
+require_once '../Controlador/controladorCrearlibro.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +9,7 @@ require_once '../modelo/crearlibro.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar libro</title>
     <style>
-           body {
+        body {
             font-family: Arial, sans-serif;
             background-image: url('../vista/img/biblioteca.png'); /* Establecer la imagen como fondo */
             background-size: cover; /* Cubrir todo el fondo */

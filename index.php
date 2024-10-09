@@ -1,5 +1,5 @@
 <?php
-require_once 'modelo/traerlibro.php';
+require_once 'Modelo/traerlibro.php';
 ?>
 <!DOCTYPE html>
 
@@ -11,7 +11,7 @@ require_once 'modelo/traerlibro.php';
     <title>Biblioteca</title>
     <style>
         
-              body {
+            body {
             font-family: Arial, sans-serif;
             background-image: url('../vista/img/biblioteca.png'); /* Establecer la imagen como fondo */
             background-size: cover; /* Cubrir todo el fondo */
@@ -95,8 +95,8 @@ require_once 'modelo/traerlibro.php';
             <strong>Género:</strong> <?= $libro['genero'] ?>
             <strong>Año:</strong> <?= $libro['año'] ?>
 
-             <!-- Botón para eliminar el libro -->
-             <form action="eliminar.php" method="post" style="display:inline;">
+            <!-- Botón para eliminar el libro -->
+            <form action="../Controlador/eliminar.php" method="post" style="display:inline;">
                 <input type="hidden" name="id" value="<?= htmlspecialchars($libro['id']) ?>">
                 <input type="submit" value="Eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este libro?');">
             </form>
@@ -104,7 +104,7 @@ require_once 'modelo/traerlibro.php';
         <?php } ?>
     </ul>
 
-    <a href="agregar.php" class="add-book-btn">Agregar libro</a>
+    <a href="../Vista/agregar.php" class="add-book-btn">Agregar libro</a>
 </body>
 </html>
 s
