@@ -96,10 +96,11 @@ require_once 'Modelo/traerlibro.php';
             <strong>Año:</strong> <?= $libro['año'] ?>
 
             <!-- Botón para eliminar el libro -->
-            <form action="../Controlador/eliminar.php" method="post" style="display:inline;">
-                <input type="hidden" name="id" value="<?= htmlspecialchars($libro['id']) ?>">
-                <input type="submit" value="Eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este libro?');">
-            </form>
+            <form action="Controlador/eliminar.php" method="post" style="display:inline;">
+    <input type="hidden" name="id" value="<?= htmlspecialchars($libro['id']) ?>">
+    <input type="submit" value="Eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este libro?');">
+</form>
+
         </li>
         <?php } ?>
     </ul>
@@ -107,4 +108,3 @@ require_once 'Modelo/traerlibro.php';
     <a href="../Vista/agregar.php" class="add-book-btn">Agregar libro</a>
 </body>
 </html>
-s
