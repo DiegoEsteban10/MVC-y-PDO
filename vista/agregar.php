@@ -68,20 +68,21 @@ require_once '../Controlador/controladorCrearlibro.php';
 </head>
 <body>
     <h1 class="colorcito">Agregar libro</h1>
+    
     <form action="" method="post">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo" required>
 
-        <label for="autor">Autor:</label>
-        <input type="text" id="autor" name="autor">
+    <label for="autor">Autor:</label>
+    <input type="text" id="autor" name="autor" required>
 
-        <label for="genero">Género:</label>
-        <input type="text" id="genero" name="genero">
+    <label for="genero">Género:</label>
+    <input type="text" id="genero" name="genero" required>
 
-        <label for="año">Año:</label>
-        <input type="number" id="año" name="año">
+    <label for="año">Año:</label>
+    <input type="number" id="año" name="año" required>
 
-        <input type="submit" value="Guardar">
-    </form>
-</body>
+    <input type="submit" value="Guardar">
+</form>
+
 </html>
